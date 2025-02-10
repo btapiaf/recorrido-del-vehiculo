@@ -1,0 +1,44 @@
+-- Insertar datos en la tabla Vehiculo
+INSERT INTO Vehiculo (Marca, Modelo, Año, Placa, Kilometraje_Actual)
+VALUES
+('Toyota', 'Corolla', 2020, 'ABC123', 15000.00),
+('Nissan', 'Sentra', 2019, 'XYZ456', 20000.00),
+('Honda', 'Civic', 2021, 'DEF789', 10000.00),
+('Ford', 'Mustang', 2018, 'GHI012', 25000.00),
+('Chevrolet', 'Spark', 2022, 'JKL345', 5000.00);
+
+-- Insertar datos en la tabla Conductor
+INSERT INTO Conductor (Nombre, Licencia, Telefono, Email)
+VALUES
+('Juan Pérez', 'LIC123456', '555-1234', 'juan.perez@example.com'),
+('María López', 'LIC654321', '555-5678', 'maria.lopez@example.com'),
+('Carlos Sánchez', 'LIC987654', '555-9101', 'carlos.sanchez@example.com'),
+('Ana García', 'LIC321654', '555-1121', 'ana.garcia@example.com'),
+('Luis Martínez', 'LIC456789', '555-3141', 'luis.martinez@example.com');
+
+-- Insertar datos en la tabla Viaje
+INSERT INTO Viaje (Fecha, Kilometraje_Inicial, Kilometraje_Final, Destino, Proposito_Viaje, Observaciones, ID_Vehiculo, ID_Conductor)
+VALUES
+('2023-10-01', 15000.00, 15200.00, 'Ciudad de México', 'Reunión de trabajo', 'Sin incidencias', 1, 1),
+('2023-10-02', 20000.00, 20200.00, 'Guadalajara', 'Entrega de documentos', 'Tráfico pesado', 2, 2),
+('2023-10-03', 10000.00, 10200.00, 'Monterrey', 'Visita a cliente', 'Sin incidencias', 3, 3),
+('2023-10-04', 25000.00, 25200.00, 'Puebla', 'Viaje familiar', 'Lluvia intensa', 4, 4),
+('2023-10-05', 5000.00, 5200.00, 'Querétaro', 'Capacitación', 'Sin incidencias', 5, 5);
+
+-- Insertar datos en la tabla Mantenimiento
+INSERT INTO Mantenimiento (ID_Vehiculo, Fecha_Mantenimiento, Tipo_Mantenimiento, Costo, Observaciones)
+VALUES
+(1, '2023-10-05', 'Cambio de aceite', 500.00, 'Aceite sintético'),
+(2, '2023-10-06', 'Revisión de frenos', 800.00, 'Pastillas de freno nuevas'),
+(3, '2023-10-07', 'Rotación de llantas', 300.00, 'Sin novedades'),
+(4, '2023-10-08', 'Alineación y balanceo', 600.00, 'Llanta pinchada'),
+(5, '2023-10-09', 'Cambio de bujías', 400.00, 'Bujías nuevas');
+
+-- Insertar datos en la tabla Combustible
+INSERT INTO Combustible (ID_Vehiculo, Fecha, Litros, Costo_Por_Litro, Kilometraje_Actual)
+VALUES
+(1, '2023-10-10', 40.00, 20.50, 15200.00),
+(2, '2023-10-11', 35.00, 21.00, 20200.00),
+(3, '2023-10-12', 30.00, 20.00, 10200.00),
+(4, '2023-10-13', 45.00, 22.00, 25200.00),
+(5, '2023-10-14', 25.00, 19.50, 5200.00);
